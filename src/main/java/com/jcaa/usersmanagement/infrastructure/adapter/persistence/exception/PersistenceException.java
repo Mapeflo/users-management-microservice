@@ -45,4 +45,26 @@ public final class PersistenceException extends RuntimeException {
   public static PersistenceException becauseConnectionFailed(final Throwable cause) {
     return new PersistenceException(MESSAGE_CONNECTION, cause);
   }
+
+  // ===== Métodos para Carrera Académica =====
+
+  public static PersistenceException becauseSaveFailedCarrera(final String id, final Throwable cause) {
+    return new PersistenceException("Failed to save carrera académica with ID: '" + id + "'.", cause);
+  }
+
+  public static PersistenceException becauseUpdateFailedCarrera(final String id, final Throwable cause) {
+    return new PersistenceException("Failed to update carrera académica with ID: '" + id + "'.", cause);
+  }
+
+  public static PersistenceException becauseFindByIdFailedCarrera(final String id, final Throwable cause) {
+    return new PersistenceException("Failed to find carrera académica with ID: '" + id + "'.", cause);
+  }
+
+  public static PersistenceException becauseFindAllFailedCarrera(final Throwable cause) {
+    return new PersistenceException("Failed to retrieve all carreras académicas.", cause);
+  }
+
+  public static PersistenceException becauseDeleteFailedCarrera(final String id, final Throwable cause) {
+    return new PersistenceException("Failed to delete carrera académica with ID: '" + id + "'.", cause);
+  }
 }
