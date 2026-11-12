@@ -1,16 +1,19 @@
 package com.jcaa.usersmanagement.domain.model;
 
+import com.jcaa.usersmanagement.domain.enums.NivelFormacion;
+import com.jcaa.usersmanagement.domain.valueobject.CarreraAcademicaId;
+import com.jcaa.usersmanagement.domain.valueobject.CarreraAcademicaNombre;
 import lombok.Value;
 
 @Value
 public class CarreraAcademicaModel {
 
-    Long id;
-    String nombre;
+    CarreraAcademicaId id;
+    CarreraAcademicaNombre nombre;
     Integer numCreditos;
     Integer numAsignaturas;
     Integer numSemestres;
-    String nivelFormacion;
+    NivelFormacion nivelFormacion;
     String titulo;
     Double valorSemestre;
     String universidad;
@@ -19,11 +22,11 @@ public class CarreraAcademicaModel {
     String areaConocimiento;
 
     public static CarreraAcademicaModel create(
-            final String nombre,
+            final CarreraAcademicaNombre nombre,
             final Integer numCreditos,
             final Integer numAsignaturas,
             final Integer numSemestres,
-            final String nivelFormacion,
+            final NivelFormacion nivelFormacion,
             final String titulo,
             final Double valorSemestre,
             final String universidad,
