@@ -72,9 +72,9 @@ public class GlobalExceptionHandler {
 
   @ExceptionHandler(Exception.class)
   @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-  public ApiErrorResponse handleGeneral(final Exception ignored) {
+  public ApiErrorResponse handleGeneral(final Exception exception) {
     return new ApiErrorResponse(
-        HttpStatus.INTERNAL_SERVER_ERROR.value(), "Error interno del servidor.");
+            HttpStatus.INTERNAL_SERVER_ERROR.value(), "Error interno del servidor.");
   }
 }
 
